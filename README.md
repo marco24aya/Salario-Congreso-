@@ -128,7 +128,7 @@ CALCULATE(
 
 ## 👤 Autor
 
-**Vini** — Analista de datos con formación en Ciencia Política, Sociología y Big Data.
+**Marco V. Ayala Sierra** — Analista de datos con formación en Ciencia Política, Sociología y Big Data.
 
 Portfolio orientado a roles de **Data Analyst** y **Data Scientist**, con proyectos aplicados a datos públicos y político-institucionales.
 
