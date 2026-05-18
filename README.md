@@ -41,8 +41,6 @@ Y va más allá, analizando la estructura salarial completa: salario base, dieta
  ┃ ┗ 📄salario_congreso.py               # Web Scrapping de Transparentia de Newtral para recoger los salarios
  ┣ 📂 powerbi
  ┃ ┗ 📄 dashboard_diputados.pbix          # Dashboard Power BI
- ┣ 📂 img
- ┃ ┣ 🖼️ dashboard_preview.png            # Captura del dashboard completo
  ┗ 📄 README.md
 ```
 
@@ -100,18 +98,26 @@ El dataset ha sido compilado manualmente a partir de fuentes oficiales e incluye
 
 ```dax
 -- Diputados que superan el salario de la Presidenta
-Diputados_Superan_Presidenta =
+Diputados > Presidente = 
 CALCULATE(
-    COUNTROWS(diputados),
-    diputados[SALARIO_BRUTO_ANUAL] > [Salario_Presidenta]
+    COUNTROWS('Tabla1'),
+    FILTER(
+        'Tabla1',
+        'Tabla1'[SALARIO_BRUTO_ANUAL] > [Salario Presidente]
+    )
 )
 
 -- Porcentaje sobre el total
-Pct_Superan =
-DIVIDE([Diputados_Superan_Presidenta], [Total_Diputados], 0) * 100
+% Diputados con mayor SBA = 
+CALCULATE(
+    DIVIDE(Tabla1[Diputados > Presidente],COUNTROWS(Tabla1),0)*100)
 ```
 
 ---
+
+### Resultado final
+<img width="1279" height="722" alt="image" src="https://github.com/user-attachments/assets/d8d80ae2-f983-41dd-89f9-bed75304c7ea" />
+
 
 ## 🛠️ Requisitos
 
