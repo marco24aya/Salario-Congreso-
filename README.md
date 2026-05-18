@@ -6,11 +6,11 @@
 
 ## 📌 Descripción
 
-Dashboard interactivo sobre las retribuciones de todos los diputados (activos y bajas) de la **XV Legislatura del Congreso de los Diputados de España**, incluyendo también los miembros del Ejecutivo.
+Dashboard interactivo sobre las retribuciones de todos los diputados (activos y bajas) de la **XV Legislatura del Congreso de los Diputados de España**, incluyendo también los miembros del Gobierno.
 
 El proyecto responde a una pregunta central:
 
-> **¿Cuántos diputados cobran más que la Presidenta del Congreso?**
+> **¿Cuántos diputados cobran más que el Presidente del Gobierno?**
 
 Y va más allá, analizando la estructura salarial completa: salario base, dietas y suplementos, desglosados por grupo parlamentario, partido político y circunscripción.
 
@@ -21,7 +21,7 @@ Y va más allá, analizando la estructura salarial completa: salario base, dieta
 | Indicador | Valor |
 |---|---|
 | Total diputados en la legislatura | 350 |
-| Diputados que superan el salario de la Presidenta | 44 (11,92%) |
+| Diputados que superan el salario del Presidente | 44 (11,92%) |
 | Salario bruto anual mínimo | 61.591 € |
 | Salario bruto anual máximo | 230.912 € (Presidenta del Congreso) |
 | Salario del Presidente del Gobierno | 110.397 € |
@@ -37,12 +37,12 @@ Y va más allá, analizando la estructura salarial completa: salario base, dieta
 ```
 📦 xv-legislatura-salarios
  ┣ 📂 data
- ┃ ┗ 📄 diputados_xv_legislatura.xlsx     # Dataset completo (activos + bajas)
+ ┃ ┗ 📄 diputados_transpatentia.xlsx     # Dataset completo (activos + bajas)
+ ┃ ┗ 📄salario_congreso.py               # Web Scrapping de Transparentia de Newtral para recoger los salarios
  ┣ 📂 powerbi
  ┃ ┗ 📄 dashboard_diputados.pbix          # Dashboard Power BI
  ┣ 📂 img
  ┃ ┣ 🖼️ dashboard_preview.png            # Captura del dashboard completo
- ┃ ┗ 🖼️ hemiciclo.png                    # Detalle del hemiciclo
  ┗ 📄 README.md
 ```
 
@@ -80,6 +80,7 @@ El dataset ha sido compilado manualmente a partir de fuentes oficiales e incluye
 ### Fuentes
 - [Congreso de los Diputados](https://www.congreso.es)
 - [BOE — Retribuciones de altos cargos](https://www.boe.es)
+- [Transparentia Buscador - Newtral](https://transparentia.newtral.es/buscador)
 
 ---
 
@@ -93,7 +94,7 @@ El dataset ha sido compilado manualmente a partir de fuentes oficiales e incluye
 - **Tabla por grupo parlamentario** — media salarial ordenada de mayor a menor
 - **Hemiciclo** — composición del Congreso por grupo parlamentario
 - **Tabla detallada** — todos los diputados con formato condicional
-- **Filtros interactivos** — por órgano, género, partido político
+- **Filtros interactivos** — por órgano, activo/inactivo y partido político
 
 ### Medidas DAX principales
 
@@ -125,8 +126,8 @@ DIVIDE([Diputados_Superan_Presidenta], [Total_Diputados], 0) * 100
 
 Portfolio orientado a roles de **Data Analyst** y **Data Scientist**, con proyectos aplicados a datos públicos y político-institucionales.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/tu-perfil)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat&logo=github)](https://github.com/tu-usuario)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/marco-vinicio-ayala-sierra/)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat&logo=github)](https://github.com/marco24aya)
 
 ---
 
